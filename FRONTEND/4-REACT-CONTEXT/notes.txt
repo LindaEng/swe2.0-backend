@@ -62,3 +62,24 @@ Demo-
 3. Wrap the Provider component to the starting component
 
 4. Import the context into your context and the useContext function from react
+
+
+
+//Context Notes
+
+Here's a breakdown of what's happening in this code:
+1. import React, { createContext, useContext, useState } from 'react' is importing the necessary modules from the react library.
+
+2. const CountContext = createContext() is creating a new context object and assigning it to the variable CountContext. This context object is used to store and share state and functionality between components.
+
+3. const CountProvider = ({children}) => {...} is creating a new component called CountProvider. This component is a provider component that wraps its child components and provides state and functionality to them through the CountContext.
+
+4. const [count, setCount] = useState(0) is using the useState hook to create a new state variable called count and its setter function setCount, and initializing it to 0.
+
+5. function increment() {...} and function decrement() {...} are two functions that are used to increment and decrement the value of the count state variable.
+
+6. <CountContext.Provider value={{count, increment, decrement}}> is rendering a context provider element that uses the CountContext to provide the count, increment and decrement values to the context consumers.
+
+7. {children} is being passed as a prop to the CountProvider component, and this line is rendering the child components that are nested within the CountProvider component.
+
+8. export {CountProvider, CountContext} is exporting the CountProvider component and the CountContext so that it can be imported and used in other parts of the application.
