@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAKA","sources":["src/styles.css"],"sourcesContent":["body {\n  font-family: 'Rubik', sans-serif;\n  font-weight: 300;\n}\n\n.layout {\n  margin-top: 24px;\n  margin-right: auto;\n  margin-left: auto;\n  height: 75%;\n  width: 75%;\n}\n"],"names":[],"version":3,"file":"index.4d663569.css.map","sourceRoot":"/__parcel_source_root/"}
