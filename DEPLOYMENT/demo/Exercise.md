@@ -16,6 +16,8 @@ To create a Dockerfile within the client folder, follow these instructions:
 
             COPY . /app
 
+            RUN apk add g++ make py3-pip
+
             RUN npm install && npm run build
 
             EXPOSE 1234
@@ -27,7 +29,7 @@ To create a Dockerfile within the client folder, follow these instructions:
 
 6. Now you have a Dockerfile within the client folder, which you can use to build an image for your application.
 
-7. To build the image, navigate to the client folder and use the command `docker build -t <image-name> .` 
+7. To build the image, navigate to the client folder and use the command `docker build . -t <image-name> ` 
 
 8. To run the container use the command `docker run -p 1234:1234 <image-name>`
 
@@ -72,3 +74,20 @@ This Dockerfile sets up an image based on the `node:18-alpine` image, copies all
 
 //website with hats
 //3:20
+
+//useful Docker commands
+
+//list all your containers
+    docker ps
+//list all your images
+    docker images
+
+//stop a container 
+    docker stop containerid
+
+//delete image
+    docker rmi imageId
+
+1. stop the container(s)
+2. delete the container
+3. delete the image
