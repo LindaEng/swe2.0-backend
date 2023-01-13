@@ -1,0 +1,64 @@
+React Context
+
+
+
+//name
+<Parent name={props.name} /> 
+    |
+<Child name={props.name}/>
+    |
+<Child name={props.name}/>
+    |
+<Child name={props.name}/>
+    |
+<Child name={props.name}/>
+
+//prop drilling
+
+React Context - it is used to help us share state and functionality between components that are not directly related. 
+React Context can help us alleviate prop drilling.
+
+
+Demo-
+1. Show you how to set up React Context
+    a. createContext
+        -we need to create a new context object
+        -create a context object file typeOfStateProvider.js
+        -Import createContext from the react library
+        -create a context object
+    b. how to create a provider components
+
+
+//before
+<Parent name={props.name} /> 
+    |
+<Child name={props.name}/>
+    |
+<Child name={props.name}/>
+    |
+<Child name={props.name}/>
+    |
+<Child name={props.name}/>
+
+//after with react context
+
+<CountProvider>
+<App /> 
+    |
+<Greeting /> 
+    |
+<ChildDecrement /> -> decrement
+    |
+<Child />
+    |
+<Child />
+</CountProvider>
+//count, increment, decrement
+
+
+2. How to provide access to the context to your components.
+1. define your context
+2. identify where in your component tree to provide access to this new context -> top parent component
+3. Wrap the Provider component to the starting component
+
+4. Import the context into your context and the useContext function from react
